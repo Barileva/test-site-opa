@@ -12,8 +12,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: set up Node.js
         uses: actions/setup-node@v4
-        with:
-        node-version: "20"
+          with:
+          node-version: "20"
       - name: Install dependencies
         run: npm ci
       - name: Start the server  

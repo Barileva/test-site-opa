@@ -30,7 +30,7 @@ jobs:
     needs: cypress_test
     runs-on:
     ubuntu_latest
-  steps:
+    steps:
     - name: Doing a deploy
       uses: appleboy/ssh-action@v0.1.10
       with:

@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -40,4 +41,4 @@ jobs:
           script: |
             cd /var/www/test-site-opa
             git pull
-            ~~~~
+          

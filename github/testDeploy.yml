@@ -1,0 +1,22 @@
+name: Test Deploy
+
+on:
+  push:
+    bransches: ["main"]
+
+
+jobs:
+  deploy:
+    ubuntu_latest
+  steps:
+    - name: Doing a deploy
+      uses: appleboy/ssh-action@v0.1.10
+      with:
+        host: ${{ secretS.HOST }}
+        username: ${{ secretS.USER }}
+        password: ${{ secretS.PASSWORD }}
+        port: ${{ secretS.PORT }}
+        script: / 
+          cd /var/www/
+          git pull
+          npm install
